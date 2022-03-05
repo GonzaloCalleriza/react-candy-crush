@@ -97,7 +97,7 @@ const App = () => {
       const isFirstRow = firstRow.includes(i)
 
       if(isFirstRow && currentColorArrangement[i] === blank){
-        let randomNumber = Math.floor(Math.random() * candyColors.length());
+        let randomNumber = Math.floor(Math.random() * candyColors.length);
         currentColorArrangement[i] = candyColors[randomNumber];
       }
 
@@ -152,7 +152,7 @@ const App = () => {
   const createBoard = () => {
     const randomColorArrangement = []
     for (let i=0; i < width*width; i++) {
-      const randomColor = candyColors(Math.floor(Math.random() * candyColors.length));
+      const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)];
       randomColorArrangement.push(randomColor); 
     }
     setCurrentColorArrangement(randomColorArrangement);
